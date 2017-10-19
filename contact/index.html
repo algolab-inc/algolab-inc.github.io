@@ -11,6 +11,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
     <link rel="stylesheet" href="../assets/css/override.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/png">
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
   </head>
   <body>
 
@@ -44,9 +45,29 @@
     <h2>お問い合わせ</h2>
     </header>
     <section class="wrapper style5" style="text-align: center;">
-    <div class="inner">
-      <iframe style="max-width:100%;" src="https://docs.google.com/forms/d/e/1FAIpQLSc2q0MC1un-3ZGvI-8JIBQ05RfBJk_s-gvu4m07lg7jgfsXSQ/viewform?embedded=true" width="760" height="1200" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
-    </div>
+      <!-- class, action, methodを変更しないでください -->
+      <form class="formrun" action="https://form.run/api/v1/r/khd66q4mk1vgs3tj6tub48ha" method="post">
+        <!-- ↓自由に要素を追加・編集することができます -->
+        <div>
+          <label>お名前</label>
+          <input name="お名前" type="text">
+        </div>
+
+        <div>
+          <label>メールアドレス [必須]</label>
+          <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+          <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+        </div>
+
+        <div>
+          <label>お問い合わせ [必須]</label>
+          <textarea name="お問い合わせ" data-formrun-required></textarea>
+          <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+        </div>
+
+        <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+      </form>
+
     </section>
   </article>
 
