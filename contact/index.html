@@ -11,7 +11,11 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
     <link rel="stylesheet" href="../assets/css/override.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/png">
+
+    <!--formrun-->
     <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+    <link rel="stylesheet" href="../assets/css/formrun_www.css" />
+
   </head>
   <body>
 
@@ -48,36 +52,31 @@
       <div class="inner">
 
         <h3>お問い合わせフォーム</h3>
-        <p>システム開発に関するご相談、お問い合わせは下記のフォームよりご連絡ください。<br />
-          確認次第折り返しご連絡いたします。</p>
 
         <!-- class, action, methodを変更しないでください -->
         <form class="formrun" action="https://form.run/api/v1/r/khd66q4mk1vgs3tj6tub48ha" method="post">
           <div class="row uniform">
             <div class="6u 12u$(xsmall)">
               <input name="お名前" type="text" id="demo-name" value="" placeholder="お名前" data-formrun-required />
-              <div data-formrun-show-if-error="お名前">お名前を入力してください</div>
+              <div data-formrun-show-if-error="お名前" class="error_message">お名前を入力してください</div>
             </div>
             <div class="6u$ 12u$(xsmall)">
               <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required id="demo-email" value="" placeholder="メールアドレス" />
-              <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+              <div data-formrun-show-if-error="メールアドレス" class="error_message">メールアドレスを正しく入力してください</div>
             </div>
             <div class="12u$">
               <textarea name="お問い合わせ" id="demo-message" placeholder="お問い合わせ" rows="6" data-formrun-required></textarea>
-              <div data-formrun-show-if-error="お問い合わせ">お問い合わせを入力してください</div>
+              <div data-formrun-show-if-error="お問い合わせ" class="error_message">お問い合わせを入力してください</div>
             </div>
             <div class="12u$">
               <ul class="actions">
                 <li>
                   <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." class="special">送信</button>
                 </li>
-                <li><input type="reset" value="Reset" /></li>
               </ul>
             </div>
           </div>
         </form>
-
-
       </div>
     </section>
   </article>
